@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.example.ian.project1spotifystreamerwindows.TrackPlayerFragment"
+                android:background="@drawable/bg_gradient">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Artist Name"
+                android:id="@+id/artistNamePlayerId"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Album Name"
+                android:id="@+id/albumNamePlayerId"
+                android:layout_below="@+id/artistNamePlayerId"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/albumImagePlayerId"
+                android:layout_below="@+id/albumNamePlayerId"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/cold1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="songNamePlayerId"
+                android:id="@+id/songNamePlayerId"
+                android:layout_below="@+id/albumImagePlayerId"
+                android:layout_centerHorizontal="true"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBarPlayerId"
+                android:layout_below="@+id/songNamePlayerId"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playButtonId"
+                android:layout_below="@+id/seekBarPlayerId"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:src="@android:drawable/ic_media_pause"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backwardButtonId"
+                android:layout_alignBottom="@+id/playButtonId"
+                android:layout_toLeftOf="@+id/albumImagePlayerId"
+                android:layout_toStartOf="@+id/playButtonId"
+                android:src="@android:drawable/ic_media_previous"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forwardButtonId"
+                android:layout_alignBottom="@+id/playButtonId"
+                android:layout_toEndOf="@+id/playButtonId"
+                android:src="@android:drawable/ic_media_next"
+                android:focusableInTouchMode="false"
+                android:layout_toRightOf="@+id/albumImagePlayerId"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=":00"
+                android:id="@+id/currentPositionTextViewId"
+                android:layout_below="@+id/seekBarPlayerId"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
